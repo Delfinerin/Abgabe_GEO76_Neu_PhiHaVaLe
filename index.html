@@ -7,12 +7,24 @@
  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
    crossorigin=""></script>
+   <style>
+  #mapid {
+    width: 80%;
+    height: 600px;
+    margin: 20px auto;   /* zentriert horizontal */
+  }
+
+  body {
+    text-align: center;  /* zentriert Überschriften & Text */
+    font-family: Arial, sans-serif;
+  }
+</style>
 </head>
 <body>
  <h1>Urlaubsorte für gestresste DozentInnen</h1>
  <p>Der gute Vorsatz im Jahr 2026: Mehr Work-Life Balance!    <a href="https://www.computerwoche.de/article/2816255/motivationsfaktor-urlaub.html">Warum?</a></p>
  <p>Für Inspiration hier eine Sammlung von sorgfältig ausgewählten Urlaubsorten! Schicken Sie uns eine Postkarte! </p>
- <div id="mapid" style="width: 600px; height: 400px; position: relative;"></div>
+ <div id="mapid"></div>
  <script>
   var mymap = L.map('mapid').setView([48.524, 9.0556]).setZoom(4);
   L.tileLayer('https://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png').addTo(mymap);
