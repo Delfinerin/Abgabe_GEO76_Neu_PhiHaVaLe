@@ -39,7 +39,7 @@
  <p>Für Inspiration hier eine Sammlung von sorgfältig ausgewählten Urlaubsorten! Schicken Sie uns eine Postkarte! </p>
  <div id="mapid"></div>
  <script>
-  var mymap = L.map('mapid').setView([49.524, 9.0556]).setZoom(5);
+  var mymap = L.map('mapid').setView([49.524, 9.0556]).setZoom(4,5);
   L.tileLayer('https://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png').addTo(mymap);
   var markHannasEmpfehlung = L.marker([56.149722, 10.224167]).addTo(mymap);
   markHannasEmpfehlung.bindPopup("<p>Hannas Empfehlung: Aarhus</p> <p>Persönliches Highlight: Museum Den Gamle By</p>");
