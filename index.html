@@ -24,7 +24,8 @@
   markLenasEmpfehlung.bindPopup("<p>Lenas Empfehlung: Gjirokastra</p> <p>Persönliches Highlight: Sonnenuntergang auf der Burg von Gjirokastra anschauen</p>");
   var markValentinsEmpfehlung = L.marker([40.09481, 23.97815]).addTo(mymap);
   markValentinsEmpfehlung.bindPopup("<p>Valentins Empfehlung: Sarti</p> <p>Persönliches Highlight: Blick vom Strand auf den Berg Athos</p>");
-    var osm_basemap = L.tileLayer('https://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png', {
+   
+   var osm_basemap = L.tileLayer('https://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png', {
 	  attribution: '<a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
   });
  
@@ -45,7 +46,7 @@
  "Open Street Map INT": osmint_basemap
 };
 
-  var legend = L.control.layers(basemaps, null, {collapsed: false, position: "topleft"}).addTo(mymap);
+  var legend = L.control.layers(basemaps, null, {collapsed: false, position: "topright"}).addTo(mymap);
  </script>
 </body>
 </html>
