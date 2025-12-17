@@ -38,6 +38,13 @@
   maxZoom: 19,
   attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
   }).addTo(mymap);
+  
+  var basemaps = {
+ "Open Street Map DE": osm_basemap,
+ "Open Topo Map": otm_basemap,
+ "Open Street Map INT": osmint_basemap
+};
+
   var legend = L.control.layers(basemaps, null, {collapsed: false, position: "topleft"}).addTo(mymap);
  </script>
 </body>
