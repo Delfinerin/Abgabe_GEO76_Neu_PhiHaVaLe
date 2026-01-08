@@ -74,8 +74,16 @@
  "ESRI World Imagery": Esri_WorldImagery
  };
  
+ var overlay_Grenzen = L.geoJSON(Grenzen, {
+  style: {
+    color: "#000000",
+    weight: 1.2,
+    opacity: 0.9
+  }
+}).addTo(mymap);
+ 
   // Add Grenzen
-  var overlay_Grenzen = L.geoJSON(Grenzen).addTo(mymap);
+  
   
   // Overlay dictonary
   var overlays = {
