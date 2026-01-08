@@ -7,7 +7,7 @@
  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
    crossorigin=""></script>
-   
+    
  <link rel="stylesheet" href="https://unpkg.com/leaflet-measure/dist/leaflet-measure.css" />
  <script src="https://unpkg.com/leaflet-measure/dist/leaflet-measure.js"></script>
 
@@ -98,7 +98,6 @@
   // Scale
   var scale = L.control.scale({maxWidth: 150, metric: true, imperial: false}).addTo(mymap);
 
-// Measure Tool
 var measureControl = new L.Control.Measure({
   position: 'topleft',
   primaryLengthUnit: 'kilometers',
@@ -106,7 +105,18 @@ var measureControl = new L.Control.Measure({
   primaryAreaUnit: 'sqkilometers',
   secondaryAreaUnit: 'sqmeters',
   activeColor: '#db4a29',
-  completedColor: '#9b2d14'
+  completedColor: '#9b2d14',
+  localization: {
+    title: "Messwerkzeug",
+    popup: {
+      label: "Messung",
+      start: "Klicken Sie auf die Karte, um die Messung zu starten",
+      finish: "Doppelklick zum Beenden",
+      clear: "Messung löschen",
+      lengthUnit: "km",
+      areaUnit: "km²"
+    }
+  }
 });
 
 measureControl.addTo(mymap);
