@@ -8,7 +8,7 @@
    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
    crossorigin=""></script>
 
- <script src="earthquake_points.js"></script>
+ <script src="Grenzen.js"></script>
    
  <style>
   
@@ -74,7 +74,7 @@
  "ESRI World Imagery": Esri_WorldImagery
  };
  
- var overlay_eq_points = L.geoJSON(eq_points).addTo(mymap);
+ var overlay_Grenzen = L.geoJSON(Grenzen).addTo(mymap);
 
 
   var legend = L.control.layers(basemaps, null, {collapsed: false, position: "topright"}).addTo(mymap);
